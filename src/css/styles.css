@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+  * button {
+    cursor: pointer; }
 
 .home {
   position: relative;
@@ -166,6 +168,8 @@
           left: 0;
           bottom: 0;
           transform: translate(-23px, 14px); }
+        .home-main-info .info-image .image-lg {
+          display: none; }
     .home-main-scroll {
       position: absolute;
       left: 43px;
@@ -292,6 +296,8 @@
       .section-solution-image .sol-icon-one img {
         width: 17px;
         height: 25px; }
+      .section-solution-image .sol-icon-one .image-lg {
+        display: none; }
     .section-solution-image .sol-icon-two {
       position: absolute;
       right: 0;
@@ -306,6 +312,8 @@
       .section-solution-image .sol-icon-two img {
         width: 28px;
         height: 23px; }
+      .section-solution-image .sol-icon-two .image-lg {
+        display: none; }
   .section-solution-text {
     margin-top: 26px; }
     .section-solution-text h3 {
@@ -790,7 +798,7 @@
       margin: 0 auto;
       background: #03293C;
       border-radius: 18px; }
-      .offer-options .option h2 {
+      .offer-options .option-title {
         margin-top: 15px;
         font-family: 'Source Sans Pro';
         font-style: normal;
@@ -884,6 +892,8 @@
           line-height: 23px;
           text-transform: capitalize;
           color: #000000; }
+      .offer-options .option-two ul li p {
+        color: #000000; }
     .offer-options .active {
       opacity: 1; }
   .offer-controls {
@@ -991,7 +1001,7 @@
       display: flex;
       align-items: center;
       padding: 6px 0; }
-      .modal-form .form .data-list li img {
+      .modal-form .form .data-list li div img {
         margin-right: 15px; }
 
 .footer {
@@ -1034,10 +1044,12 @@
       font-size: 20px;
       line-height: 23px;
       color: #FFFFFF; }
-    .footer-right ul {
+    .footer-right div ul {
       margin-top: 14px;
       display: flex;
       justify-content: space-between;
       width: 108px; }
-      .footer-right ul li {
+      .footer-right div ul li {
         list-style-type: none; }
+    .footer-right div .networks-grid {
+      display: none; }

@@ -70,6 +70,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    button {
+        cursor: pointer;
+    }
 }
 
 
@@ -270,6 +273,9 @@
                     bottom: 0;
                     transform: translate(-23px, 14px);
                 }
+                .image-lg {
+                    display: none;
+                }
             }
         }
         &-scroll {
@@ -422,6 +428,9 @@
                 width: 17px;
                 height: 25px;
             }
+            .image-lg {
+                display: none;
+            }
         }
         .sol-icon-two {
             position: absolute;
@@ -437,6 +446,9 @@
             img {
                 width: 28px;
                 height: 23px;
+            }
+            .image-lg {
+                display: none;
             }
         }
     }
@@ -1033,7 +1045,7 @@
             margin: 0 auto;
             background: #03293C;
             border-radius: 18px;
-            h2 {
+            &-title {
                 margin-top: 15px;
                 font-family: 'Source Sans Pro';
                 font-style: normal;
@@ -1141,6 +1153,13 @@
                         font-size: 12px;
                         line-height: 23px;
                         text-transform: capitalize;
+                        color: #000000;
+                    }
+                }
+            }
+            ul {
+                li {
+                    p {
                         color: #000000;
                     }
                 }
@@ -1278,8 +1297,10 @@
                 display: flex;
                 align-items: center;
                 padding: 6px 0;
-                img {
-                    margin-right: 15px;
+                div {
+                    img {
+                        margin-right: 15px;
+                    }
                 }
             }
         }
@@ -1331,13 +1352,18 @@
             line-height: 23px;
             color: #FFFFFF;
         }
-        ul {
-            margin-top: 14px;
-            display: flex;
-            justify-content: space-between;
-            width: 108px;
-            li {
-                list-style-type: none;
+        div {
+            ul {
+                margin-top: 14px;
+                display: flex;
+                justify-content: space-between;
+                width: 108px;
+                li {
+                    list-style-type: none;
+                }
+            }
+            .networks-grid {
+                display: none;
             }
         }
     }
