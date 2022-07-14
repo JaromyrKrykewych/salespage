@@ -75,7 +75,9 @@
     }
 }
 
-
+body {
+    scroll-behavior: smooth;
+}
 
 //Home
 
@@ -975,6 +977,7 @@
                     div {
                         margin: 0 9px;
                         width: 27px;
+                        min-width: 27px;
                         height: 27px;
                         border-radius: 50%;
                         background: #F2F2F2;

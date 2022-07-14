@@ -5,6 +5,9 @@
   * button {
     cursor: pointer; }
 
+body {
+  scroll-behavior: smooth; }
+
 .home {
   position: relative;
   background: linear-gradient(102.25deg, rgba(247, 182, 51, 0.15) 8.14%, rgba(236, 64, 121, 0.15) 90.18%);
@@ -743,6 +746,7 @@
       .section-foda-box .foda-info ul li div {
         margin: 0 9px;
         width: 27px;
+        min-width: 27px;
         height: 27px;
         border-radius: 50%;
         background: #F2F2F2;
@@ -1003,6 +1007,12 @@
       padding: 6px 0; }
       .modal-form .form .data-list li div img {
         margin-right: 15px; }
+      .modal-form .form .data-list li p {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px; }
 
 .footer {
   position: relative;
