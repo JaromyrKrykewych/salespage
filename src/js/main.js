@@ -137,9 +137,12 @@ const setTimeFunction = (div, animation, time) => {
 
 let benefitCards = document.getElementsByClassName('grid-column')
 let benefits = [...benefitCards]
-benefits.forEach((benefit, idx) => {
-    setTimeFunction(benefit, 'animate__fadeInUp', `${200 * (idx + 1)}`)
-})
+const benefitsAnimation = () => {
+    benefits.forEach((benefit, idx) => {
+        setTimeFunction(benefit, 'animate__fadeInUp', `${200 * (idx + 1)}`)
+    })
+}
+
 
 //comments
 
@@ -178,3 +181,51 @@ targets.forEach((target, idx) => {
         }
     })
 })
+
+const animation = (element, nameClass, functio) => {
+
+    const animating = (entradas, observador) => {
+        entradas.forEach( (entrada) => {
+            if (entrada.isIntersecting) {
+                functio(element, nameClass)
+            }
+        })
+    }
+    
+    const observador = new IntersectionObserver (animating, {
+        root: null,
+        rootMargin: '500px 0px 0px 0px',
+        threshold: 0
+    })
+
+    observador.observe(element);
+}
+
+const divOffer = document.getElementById('offer-controls')
+const offerTargets = [...divOffer.children]
+const offerDiv = document.getElementById('offer-div')
+const offerOptions = [...offerDiv.children]
+offerTargets.forEach((offer, idx) => {
+    offer.addEventListener('click', (e) => {
+        if(!e.target.classList.contains('active')){
+            for(let i=0; i<offerTargets.length; i++){
+                offerTargets[i].classList.remove('active')
+                offerOptions[i].classList.remove('active')
+            }
+            e.target.classList.add('active')
+            offerOptions[idx].classList.add('active')
+        }
+    })
+})
+
+//Initialation with animations
+
+const benefitSection = document.getElementById('benefit-section')
+
+animation(benefitSection, null, benefitsAnimation)
+animation(divImage, 'animate__bounceInLeft', addAnimation)
+for (let i=0; i<texts.length; i++) {
+    if(texts[i].classList.contains('show')) {
+        animation(texts[i], 'animate__bounceInRight', addAnimation)
+    }
+}
