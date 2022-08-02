@@ -468,34 +468,45 @@ body {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background: url(../images/comments-lg.png), #C4C4C4;
+        background: url("../images/comments-lg.png"), #C4C4C4;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center; }
+        background-position: top center;
+        object-fit: contain; }
     .section-comments-grid .grid-images-controls {
       display: none; }
   .section-comments-grid .grid-text {
     margin-top: 21px; }
-    .section-comments-grid .grid-text-info {
-      width: 65%;
-      margin: 0 auto; }
-      .section-comments-grid .grid-text-info h3 {
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 23px;
-        text-align: center;
-        color: #D9004B; }
-      .section-comments-grid .grid-text-info p {
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 14px;
-        text-align: center;
-        color: #000000;
-        padding: 5px 0; }
+    .section-comments-grid .grid-text .text-box {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      width: inherit; }
+      .section-comments-grid .grid-text .text-box .grid-text-info {
+        width: 65%;
+        margin: 0 auto;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        opacity: 0; }
+        .section-comments-grid .grid-text .text-box .grid-text-info h3 {
+          font-family: 'Source Sans Pro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 23px;
+          text-align: center;
+          color: #D9004B; }
+        .section-comments-grid .grid-text .text-box .grid-text-info p {
+          font-family: 'Lato';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 14px;
+          text-align: center;
+          color: #000000;
+          padding: 5px 0; }
+      .section-comments-grid .grid-text .text-box .show {
+        opacity: 1; }
     .section-comments-grid .grid-text-values .value-description {
       display: none; }
     .section-comments-grid .grid-text-values div {

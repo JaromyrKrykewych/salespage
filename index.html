@@ -12,6 +12,11 @@
     <!--css-->
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <!-- animate-css -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body id="body">
     <section class="home">
@@ -227,19 +232,57 @@
             </div>
             <div class="grid-images">
                 <div class="grid-images-bg">
-                    <div></div>
+                    <div class="animate__animated animate__bounceInLeft comment-photo" id="comment-image"></div>
                 </div>
             </div>
             <div class="grid-text">
-                <div class="grid-text-info">
-                    <h3>Carl Sagan</h3>
-                    <p>
-                        Microdosing chambray kitsch mustache. Lorem 
-                        ipsum dolor sit amet consectetur, adipisicing 
-                        elit. Vel rerum atque, nemo magni totam 
-                        necessitatibus. Microdosing chambray kitsch 
-                        mustache
-                    </p>
+                <div class="text-box" id="comment-text">
+                    <div class="animate__animated animate__bounceInRight grid-text-info">
+                        <h3>Samantha Russel</h3>
+                        <p>
+                            Microdosing chambray kitsch mustache. Lorem 
+                            ipsum dolor sit amet consectetur, adipisicing 
+                            elit. Vel rerum atque, nemo magni totam 
+                            necessitatibus.
+                        </p>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight grid-text-info">
+                        <h3>Mark Cunnington</h3>
+                        <p>
+                            Microdosing chambray kitsch mustache. Lorem 
+                            ipsum dolor sit amet consectetur, adipisicing 
+                            elit. Vel rerum atque, nemo magni totam 
+                            necessitatibus. Microdosing chambray kitsch 
+                            mustache lorem ipsum nostre dommu.
+                        </p>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight grid-text-info show">
+                        <h3>Carl Sagan</h3>
+                        <p>
+                            Microdosing chambray kitsch mustache. Lorem 
+                            ipsum dolor sit amet consectetur, adipisicing 
+                            elit. Vel rerum atque, nemo magni totam 
+                            necessitatibus. Microdosing chambray kitsch 
+                            mustache
+                        </p>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight grid-text-info">
+                        <h3>Marissa Hutson</h3>
+                        <p>
+                            Microdosing chambray kitsch mustache. Lorem 
+                            ipsum dolor sit amet consectetur, adipisicing 
+                            elit.
+                        </p>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight grid-text-info">
+                        <h3>Julian Casper</h3>
+                        <p>
+                            Microdosing chambray kitsch mustache. Lorem 
+                            ipsum dolor sit amet consectetur, adipisicing 
+                            elit. Vel rerum atque, nemo magni totam 
+                            necessitatibus.
+                        </p>
+                    </div>
                 </div>
                 <div class="grid-text-values">
                     <ul class="value-description">
@@ -268,7 +311,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-controls">
+            <div class="grid-controls" id="comment-targets">
                 <div class="comment-control"></div>
                 <div class="comment-control"></div>
                 <div class="comment-control active"></div>

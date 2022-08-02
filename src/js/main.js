@@ -64,7 +64,6 @@ let buttonsBenefit = [...getButtonsBenefit.children];
 const changePositionBenefit = (value) => {
     let getCarouselBenefit = document.getElementById('items-carousel-benefit');
     let carousel = [...getCarouselBenefit.children];
-    console.log(carousel);
     if(value == 0) {
         replaceClass(carousel[4], 'column-one');
         replaceClass(carousel[5], 'column-two');
@@ -114,4 +113,68 @@ buttonsBenefit.forEach(button => {
            
         }
     });
+})
+
+const removeAnimation = (div, animation) => {
+    div.classList.remove('animate__animated')
+    div.classList.remove(animation)
+}
+const addAnimation = (div, animation) => {
+    div.classList.add('animate__animated')
+    div.classList.add(animation)
+}
+
+const showBenefits = (div, animation) => {
+    div.classList.add('animate__animated')
+    div.classList.add(animation)
+}
+
+const setTimeFunction = (div, animation, time) => {
+    setTimeout(() => {
+        showBenefits(div, animation)
+    }, time)
+}
+
+let benefitCards = document.getElementsByClassName('grid-column')
+let benefits = [...benefitCards]
+benefits.forEach((benefit, idx) => {
+    setTimeFunction(benefit, 'animate__fadeInUp', `${200 * (idx + 1)}`)
+})
+
+//comments
+
+const commentImages = [
+    './src/images/comments-1.jpg',
+    './src/images/comments-2.jpg',
+    './src/images/comments-lg.png',
+    './src/images/comments-3.jpg',
+    './src/images/comments-4.jpg'
+]
+
+let divTargets = document.getElementById('comment-targets');
+let targets = [...divTargets.children];
+let divTexts = document.getElementById('comment-text');
+let texts = [...divTexts.children];
+let divImage = document.getElementById('comment-image');
+
+
+targets.forEach((target, idx) => {
+    target.addEventListener('click', (e) => {
+        removeAnimation(divImage, 'animate__bounceInLeft')
+        if(!e.target.classList.contains('active')){
+            for(let i=0; i<targets.length; i++) {
+                targets[i].classList.remove('active')
+                texts[i].classList.remove('show')
+                removeAnimation(texts[i], 'animate__bounceInRight')
+            }
+            e.target.classList.add('active')
+            setTimeout(() => {
+                divImage.style.backgroundImage = `url(${commentImages[idx]})`
+                texts[idx].classList.add('show')
+                addAnimation(divImage, 'animate__bounceInLeft')
+                addAnimation(texts[idx], 'animate__bounceInRight')
+            }, 200)
+            
+        }
+    })
 })

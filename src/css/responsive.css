@@ -266,15 +266,15 @@
         grid-row: 2/3;
         grid-column: 2/3;
         transform: translateY(-270px); }
-        .section-comments-grid .grid-text-info {
+        .section-comments-grid .grid-text .text-box .grid-text-info {
           width: 90%;
           margin: 0; }
-          .section-comments-grid .grid-text-info h3 {
+          .section-comments-grid .grid-text .text-box .grid-text-info h3 {
             font-size: 20px;
             line-height: 23px;
             text-align: left;
             padding: 4px 0; }
-          .section-comments-grid .grid-text-info p {
+          .section-comments-grid .grid-text .text-box .grid-text-info p {
             font-size: 16px;
             line-height: 24px;
             text-align: left;
@@ -823,29 +823,33 @@
         grid-row: 1/2;
         grid-column: 1/2; }
         .section-comments-grid .grid-images-bg {
+          position: relative;
           width: 439px;
           height: 384px;
           background: #E9E8E8;
           border-radius: 5px; }
-          .section-comments-grid .grid-images-bg div {
+          .section-comments-grid .grid-images-bg .comment-photo {
+            position: absolute;
+            top: -32px;
+            left: 0;
+            right: 0;
             width: 293px;
             border-radius: 5px;
             margin: 0 auto;
-            height: 448px;
-            transform: translateY(-32px); }
+            height: 448px; }
       .section-comments-grid .grid-text {
         grid-row: 2/3;
         grid-column: 2/3;
         transform: translateY(-290px); }
-        .section-comments-grid .grid-text-info {
+        .section-comments-grid .grid-text .text-box .grid-text-info {
           width: 90%;
           margin: 0; }
-          .section-comments-grid .grid-text-info h3 {
+          .section-comments-grid .grid-text .text-box .grid-text-info h3 {
             font-size: 26px;
             line-height: 23px;
             text-align: left;
             padding: 8px 0; }
-          .section-comments-grid .grid-text-info p {
+          .section-comments-grid .grid-text .text-box .grid-text-info p {
             font-size: 16px;
             line-height: 24px;
             text-align: left;
